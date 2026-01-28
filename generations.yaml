@@ -1,3 +1,6 @@
+references:
+  - "https://en.wikipedia.org/wiki/Nissan_Patrol"
+
 generations:
   - name: "First Generation (4W60)"
     start_year: 1951
@@ -15,13 +18,13 @@ generations:
     description: "The 160 Series Patrol, launched in 1980, represented the third generation of Nissan’s iconic 4WD SUV, modernizing the Patrol with updated bodywork, improved powertrain options, and broader model configurations including wagons and pickups. Retaining the traditional ladder‑frame architecture and rugged mechanicals, the 160 Series refined comfort and drivability for family and expedition use while maintaining strong off‑road capability. This generation bridged the gap between the Patrol’s utilitarian origins and the more sophisticated, coil‑suspension models that followed, setting the stage for broader market acceptance and expanding its appeal beyond strictly utilitarian roles.":contentReference[oaicite:0]{index=0}
 
   - name: "Fourth Generation (Y60)"
-    start_year: 1987
+    start_year: 1989
     end_year: 1997
     description: "The Nissan Patrol Y60 (also known as GQ in some markets), introduced in 1987, was a significant evolution with the adoption of coil‑spring front and rear suspension, improved ride comfort, and enhanced off‑road traction. Built on a rugged ladder‑frame chassis with strengthened axles and more advanced differentials, the Y60 expanded Patrol’s capability for both leisure and demanding terrain. Offering a range of robust petrol and diesel engines and multiple body styles, this generation broadened the Patrol’s global appeal and reinforced its reputation for reliability and durability under harsh conditions.":contentReference[oaicite:0]{index=0}
 
   - name: "Fifth Generation (Y61)"
     start_year: 1997
-    end_year: 2010
+    end_year: 2024
     description: "The Nissan Patrol Y61, launched in 1997, continued the model’s legacy with further refinements in comfort, technology, and engine performance while preserving the core off‑road capability that defined the Patrol nameplate. Featuring improved ergonomics, more refined interiors, and a broader range of turbo‑diesel and petrol engines, the Y61 balanced rugged capability with increased usability for long‑distance travel and family use. Its long production span across many markets reflected sustained demand for a vehicle capable of combining serious off‑road performance with everyday practicality.":contentReference[oaicite:0]{index=0}
 
   - name: "Sixth Generation (Y62)"
