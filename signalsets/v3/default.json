@@ -1,76 +1,419 @@
-{ "commands": [
-{ "hdr": "707", "rax": "727", "cmd": {"22": "0103"}, "freq": 0.1, "dbgfilter": { "to": 2023, "from": 2026 },
-  "signals": [
-    {"id": "PATROL_TURN_SIGNAL_RIGHT", "path": "Control", "fmt": {          "len": 1, "max": 1, "unit": "offon" }, "name": "Right turn signal"},
-    {"id": "PATROL_TURN_SIGNAL_LEFT",  "path": "Control", "fmt": {"bix": 1, "len": 1, "max": 1, "unit": "offon" }, "name": "Left turn signal"}
-  ]},
-{ "hdr": "723", "rax": "735", "cmd": {"22": "0101"}, "freq": 0.1, "dbgfilter": { "to": 2018, "years": [2020, 2021, 2022, 2023], "from": 2026 },
-  "signals": [
-    {"id": "PATROL_YAW_RATE", "path": "Control", "fmt": { "len": 16, "max": 3276.7, "min": -3276.8, "div": 10, "sign": true, "unit": "degrees" }, "name": "Yaw rate"}
-  ]},
-{ "hdr": "723", "rax": "735", "cmd": {"22": "0107"}, "freq": 0.1, "dbgfilter": { "to": 2018, "years": [2020, 2021, 2022, 2023], "from": 2026 },
-  "signals": [
-    {"id": "PATROL_RADAR_DISTANCE", "path": "Cruise control", "fmt": { "len": 16, "max": 6553.5, "div": 10, "unit": "meters" }, "name": "Radar distance"}
-  ]},
-{ "hdr": "723", "rax": "735", "cmd": {"22": "0108"}, "freq": 0.1, "dbgfilter": { "to": 2018, "years": [2020, 2021, 2022, 2023], "from": 2026 },
-  "signals": [
-    {"id": "PATROL_RADAR_SPEED", "path": "Cruise control", "fmt": { "len": 16, "max": 3276.7, "min": -3276.8, "div": 10, "sign": true, "unit": "metersPerSecond" }, "name": "Relative speed"}
-  ]},
-{ "hdr": "723", "rax": "735", "cmd": {"22": "0110"}, "freq": 0.1, "dbgfilter": { "to": 2018, "years": [2020, 2021, 2022, 2023], "from": 2026 },
-  "signals": [
-    {"id": "PATROL_STEER_ANGLE", "path": "Control", "fmt": { "len": 16, "max": 3276.7, "min": -3276.8, "div": 10, "sign": true, "unit": "degrees" }, "name": "Steering wheel angle", "description": "Negative values are clockwise, positive values are counter-clockwise."}
-  ]},
-{ "hdr": "743", "rax": "763", "fcm1": true, "cmd": {"22": "0E01"}, "freq": 1, "dbgfilter": { "to": 2018, "years": [2020, 2021, 2022, 2023], "from": 2026 },
-  "signals": [
-    {"id": "PATROL_ODO", "path": "Trips", "fmt": { "len": 24, "max": 16777215, "unit": "miles" }, "name": "Odometer", "suggestedMetric": "odometer"}
-  ]},
-{ "hdr": "744", "cmd": {"22": "4007"}, "freq": 1, "dbgfilter": { "to": 2018, "years": [2020, 2021, 2022, 2023], "from": 2026 },
-  "signals": [
-    {"id": "PATROL_AC_STATUS", "path": "Climate", "fmt": { "len": 8, "max": 255, "unit": "offon" }, "name": "A/C status"}
-  ]},
-{ "hdr": "744", "cmd": {"22": "4008"}, "freq": 1, "dbgfilter": { "to": 2018, "years": [2020, 2021, 2022, 2023], "from": 2026 },
-  "signals": [
-    {"id": "PATROL_AAT", "path": "Climate", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Ambient air temperature"}
-  ]},
-{ "hdr": "744", "cmd": {"22": "F467"}, "freq": 1, "dbgfilter": { "to": 2018, "years": [2020, 2021, 2022, 2023], "from": 2026 },
-  "signals": [
-    {"id": "PATROL_ECT", "path": "Climate", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Engine coolant temperature"}
-  ]},
-{ "hdr": "758", "rax": "778", "cmd": {"22": "0201"}, "freq": 5, "dbgfilter": { "to": 2018, "years": [2020, 2021, 2022, 2023], "from": 2026 },
-  "signals": [
-    {"id": "PATROL_TP_FL", "path": "Tires", "fmt": { "len": 8, "max": 63.75, "div": 4, "unit": "psi" }, "name": "Front left tire pressure", "suggestedMetric": "frontLeftTirePressure"}
-  ]},
-{ "hdr": "758", "rax": "778", "cmd": {"22": "0202"}, "freq": 5, "dbgfilter": { "to": 2018, "years": [2020, 2021, 2022, 2023], "from": 2026 },
-  "signals": [
-    {"id": "PATROL_TP_FR", "path": "Tires", "fmt": { "len": 8, "max": 63.75, "div": 4, "unit": "psi" }, "name": "Front right tire pressure", "suggestedMetric": "frontRightTirePressure"}
-  ]},
-{ "hdr": "758", "rax": "778", "cmd": {"22": "0203"}, "freq": 5, "dbgfilter": { "to": 2018, "years": [2020, 2021, 2022, 2023], "from": 2026 },
-  "signals": [
-    {"id": "PATROL_TP_RR", "path": "Tires", "fmt": { "len": 8, "max": 63.75, "div": 4, "unit": "psi" }, "name": "Rear right tire pressure", "suggestedMetric": "rearRightTirePressure"}
-  ]},
-{ "hdr": "758", "rax": "778", "cmd": {"22": "0204"}, "freq": 5, "dbgfilter": { "to": 2018, "years": [2020, 2021, 2022, 2023], "from": 2026 },
-  "signals": [
-    {"id": "PATROL_TP_RL", "path": "Tires", "fmt": { "len": 8, "max": 63.75, "div": 4, "unit": "psi" }, "name": "Rear left tire pressure", "suggestedMetric": "rearLeftTirePressure"}
-  ]},
-{ "hdr": "758", "rax": "778", "cmd": {"22": "020D"}, "freq": 5, "dbgfilter": { "to": 2018, "years": [2020, 2021, 2022, 2023], "from": 2026 },
-  "signals": [
-    {"id": "PATROL_TPW_FL", "path": "Tires", "fmt": { "len": 8, "max": 63.75, "div": 4, "unit": "psi" }, "name": "Front left tire pressure, warning"}
-  ]},
-{ "hdr": "758", "rax": "778", "cmd": {"22": "020E"}, "freq": 5, "dbgfilter": { "to": 2018, "years": [2020, 2021, 2022, 2023], "from": 2026 },
-  "signals": [
-    {"id": "PATROL_TPW_FR", "path": "Tires", "fmt": { "len": 8, "max": 63.75, "div": 4, "unit": "psi" }, "name": "Front right tire pressure, warning"}
-  ]},
-{ "hdr": "758", "rax": "778", "cmd": {"22": "020F"}, "freq": 5, "dbgfilter": { "to": 2018, "years": [2020, 2021, 2022, 2023], "from": 2026 },
-  "signals": [
-    {"id": "PATROL_TPW_RR", "path": "Tires", "fmt": { "len": 8, "max": 63.75, "div": 4, "unit": "psi" }, "name": "Rear right tire pressure, warning"}
-  ]},
-{ "hdr": "758", "rax": "778", "cmd": {"22": "0210"}, "freq": 5, "dbgfilter": { "to": 2018, "years": [2020, 2021, 2022, 2023], "from": 2026 },
-  "signals": [
-    {"id": "PATROL_TPW_RL", "path": "Tires", "fmt": { "len": 8, "max": 63.75, "div": 4, "unit": "psi" }, "name": "Rear left tire pressure, warning"}
-  ]},
-{ "hdr": "7E0", "rax": "7E8", "cmd": {"22": "122B"}, "freq": 30, "dbgfilter": { "to": 2014, "years": [2016, 2017], "from": 2026 },
-  "signals": [
-    {"id": "PATROL_CC_S", "path": "Cruise control", "fmt": { "len": 16, "max": 255, "unit": "scalar" }, "name": "Cruise control speed"}
-  ]}
-]
+{
+  "commands": [
+    {
+      "hdr": "707",
+      "rax": "727",
+      "cmd": {
+        "22": "0103"
+      },
+      "freq": 0.1,
+      "signals": [
+        {
+          "id": "PATROL_TURN_SIGNAL_RIGHT",
+          "path": "Control",
+          "fmt": {
+            "len": 1,
+            "max": 1,
+            "unit": "offon"
+          },
+          "name": "Right turn signal"
+        },
+        {
+          "id": "PATROL_TURN_SIGNAL_LEFT",
+          "path": "Control",
+          "fmt": {
+            "bix": 1,
+            "len": 1,
+            "max": 1,
+            "unit": "offon"
+          },
+          "name": "Left turn signal"
+        }
+      ],
+      "dbg": true
+    },
+    {
+      "hdr": "723",
+      "rax": "735",
+      "cmd": {
+        "22": "0101"
+      },
+      "freq": 0.1,
+      "signals": [
+        {
+          "id": "PATROL_YAW_RATE",
+          "path": "Control",
+          "fmt": {
+            "len": 16,
+            "max": 3276.7,
+            "min": -3276.8,
+            "div": 10,
+            "sign": true,
+            "unit": "degrees"
+          },
+          "name": "Yaw rate"
+        }
+      ],
+      "dbg": true
+    },
+    {
+      "hdr": "723",
+      "rax": "735",
+      "cmd": {
+        "22": "0107"
+      },
+      "freq": 0.1,
+      "signals": [
+        {
+          "id": "PATROL_RADAR_DISTANCE",
+          "path": "Cruise control",
+          "fmt": {
+            "len": 16,
+            "max": 6553.5,
+            "div": 10,
+            "unit": "meters"
+          },
+          "name": "Radar distance"
+        }
+      ],
+      "dbg": true
+    },
+    {
+      "hdr": "723",
+      "rax": "735",
+      "cmd": {
+        "22": "0108"
+      },
+      "freq": 0.1,
+      "signals": [
+        {
+          "id": "PATROL_RADAR_SPEED",
+          "path": "Cruise control",
+          "fmt": {
+            "len": 16,
+            "max": 3276.7,
+            "min": -3276.8,
+            "div": 10,
+            "sign": true,
+            "unit": "metersPerSecond"
+          },
+          "name": "Relative speed"
+        }
+      ],
+      "dbg": true
+    },
+    {
+      "hdr": "723",
+      "rax": "735",
+      "cmd": {
+        "22": "0110"
+      },
+      "freq": 0.1,
+      "signals": [
+        {
+          "id": "PATROL_STEER_ANGLE",
+          "path": "Control",
+          "fmt": {
+            "len": 16,
+            "max": 3276.7,
+            "min": -3276.8,
+            "div": 10,
+            "sign": true,
+            "unit": "degrees"
+          },
+          "name": "Steering wheel angle",
+          "description": "Negative values are clockwise, positive values are counter-clockwise."
+        }
+      ],
+      "dbg": true
+    },
+    {
+      "hdr": "743",
+      "rax": "763",
+      "fcm1": true,
+      "cmd": {
+        "22": "0E01"
+      },
+      "freq": 1,
+      "signals": [
+        {
+          "id": "PATROL_ODO",
+          "path": "Trips",
+          "fmt": {
+            "len": 24,
+            "max": 16777215,
+            "unit": "miles"
+          },
+          "name": "Odometer",
+          "suggestedMetric": "odometer"
+        }
+      ],
+      "dbg": true
+    },
+    {
+      "hdr": "744",
+      "cmd": {
+        "22": "4007"
+      },
+      "freq": 1,
+      "signals": [
+        {
+          "id": "PATROL_AC_STATUS",
+          "path": "Climate",
+          "fmt": {
+            "len": 8,
+            "max": 255,
+            "unit": "offon"
+          },
+          "name": "A/C status"
+        }
+      ],
+      "dbg": true
+    },
+    {
+      "hdr": "744",
+      "cmd": {
+        "22": "4008"
+      },
+      "freq": 1,
+      "signals": [
+        {
+          "id": "PATROL_AAT",
+          "path": "Climate",
+          "fmt": {
+            "len": 8,
+            "max": 215,
+            "min": -40,
+            "add": -40,
+            "unit": "celsius"
+          },
+          "name": "Ambient air temperature"
+        }
+      ],
+      "dbg": true
+    },
+    {
+      "hdr": "744",
+      "cmd": {
+        "22": "F467"
+      },
+      "freq": 1,
+      "signals": [
+        {
+          "id": "PATROL_ECT",
+          "path": "Climate",
+          "fmt": {
+            "len": 8,
+            "max": 215,
+            "min": -40,
+            "add": -40,
+            "unit": "celsius"
+          },
+          "name": "Engine coolant temperature"
+        }
+      ],
+      "dbg": true
+    },
+    {
+      "hdr": "758",
+      "rax": "778",
+      "cmd": {
+        "22": "0201"
+      },
+      "freq": 5,
+      "signals": [
+        {
+          "id": "PATROL_TP_FL",
+          "path": "Tires",
+          "fmt": {
+            "len": 8,
+            "max": 63.75,
+            "div": 4,
+            "unit": "psi"
+          },
+          "name": "Front left tire pressure",
+          "suggestedMetric": "frontLeftTirePressure"
+        }
+      ],
+      "dbg": true
+    },
+    {
+      "hdr": "758",
+      "rax": "778",
+      "cmd": {
+        "22": "0202"
+      },
+      "freq": 5,
+      "signals": [
+        {
+          "id": "PATROL_TP_FR",
+          "path": "Tires",
+          "fmt": {
+            "len": 8,
+            "max": 63.75,
+            "div": 4,
+            "unit": "psi"
+          },
+          "name": "Front right tire pressure",
+          "suggestedMetric": "frontRightTirePressure"
+        }
+      ],
+      "dbg": true
+    },
+    {
+      "hdr": "758",
+      "rax": "778",
+      "cmd": {
+        "22": "0203"
+      },
+      "freq": 5,
+      "signals": [
+        {
+          "id": "PATROL_TP_RR",
+          "path": "Tires",
+          "fmt": {
+            "len": 8,
+            "max": 63.75,
+            "div": 4,
+            "unit": "psi"
+          },
+          "name": "Rear right tire pressure",
+          "suggestedMetric": "rearRightTirePressure"
+        }
+      ],
+      "dbg": true
+    },
+    {
+      "hdr": "758",
+      "rax": "778",
+      "cmd": {
+        "22": "0204"
+      },
+      "freq": 5,
+      "signals": [
+        {
+          "id": "PATROL_TP_RL",
+          "path": "Tires",
+          "fmt": {
+            "len": 8,
+            "max": 63.75,
+            "div": 4,
+            "unit": "psi"
+          },
+          "name": "Rear left tire pressure",
+          "suggestedMetric": "rearLeftTirePressure"
+        }
+      ],
+      "dbg": true
+    },
+    {
+      "hdr": "758",
+      "rax": "778",
+      "cmd": {
+        "22": "020D"
+      },
+      "freq": 5,
+      "signals": [
+        {
+          "id": "PATROL_TPW_FL",
+          "path": "Tires",
+          "fmt": {
+            "len": 8,
+            "max": 63.75,
+            "div": 4,
+            "unit": "psi"
+          },
+          "name": "Front left tire pressure, warning"
+        }
+      ],
+      "dbg": true
+    },
+    {
+      "hdr": "758",
+      "rax": "778",
+      "cmd": {
+        "22": "020E"
+      },
+      "freq": 5,
+      "signals": [
+        {
+          "id": "PATROL_TPW_FR",
+          "path": "Tires",
+          "fmt": {
+            "len": 8,
+            "max": 63.75,
+            "div": 4,
+            "unit": "psi"
+          },
+          "name": "Front right tire pressure, warning"
+        }
+      ],
+      "dbg": true
+    },
+    {
+      "hdr": "758",
+      "rax": "778",
+      "cmd": {
+        "22": "020F"
+      },
+      "freq": 5,
+      "signals": [
+        {
+          "id": "PATROL_TPW_RR",
+          "path": "Tires",
+          "fmt": {
+            "len": 8,
+            "max": 63.75,
+            "div": 4,
+            "unit": "psi"
+          },
+          "name": "Rear right tire pressure, warning"
+        }
+      ],
+      "dbg": true
+    },
+    {
+      "hdr": "758",
+      "rax": "778",
+      "cmd": {
+        "22": "0210"
+      },
+      "freq": 5,
+      "signals": [
+        {
+          "id": "PATROL_TPW_RL",
+          "path": "Tires",
+          "fmt": {
+            "len": 8,
+            "max": 63.75,
+            "div": 4,
+            "unit": "psi"
+          },
+          "name": "Rear left tire pressure, warning"
+        }
+      ],
+      "dbg": true
+    },
+    {
+      "hdr": "7E0",
+      "rax": "7E8",
+      "cmd": {
+        "22": "122B"
+      },
+      "freq": 30,
+      "signals": [
+        {
+          "id": "PATROL_CC_S",
+          "path": "Cruise control",
+          "fmt": {
+            "len": 16,
+            "max": 255,
+            "unit": "scalar"
+          },
+          "name": "Cruise control speed"
+        }
+      ],
+      "dbg": true
+    }
+  ]
 }
