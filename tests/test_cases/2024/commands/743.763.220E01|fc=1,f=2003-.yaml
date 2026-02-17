@@ -1,0 +1,11 @@
+command_id: 743.763.220E01|fc=1,f=2003-
+test_cases:
+- expected_values:
+    PATROL_ODO: 27057
+  response: 76306620E010069B1
+- expected_values:
+    PATROL_ODO: 28159
+  response: 76306620E01006DFF
+- expected_values:
+    PATROL_ODO: 30469
+  response: '76306620E01007705'

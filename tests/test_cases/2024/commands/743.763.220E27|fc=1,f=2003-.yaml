@@ -1,0 +1,8 @@
+command_id: 743.763.220E27|fc=1,f=2003-
+test_cases:
+- expected_values:
+    PATROL_TP_RR: 201.67166
+  response: '76304620E2775'
+- expected_values:
+    PATROL_TP_RR: 236.14545
+  response: '76304620E2789'
