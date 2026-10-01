@@ -1,0 +1,6 @@
+model_year: 2014
+unsupported_commands_by_ecu:
+  "743":
+  - 743.763.220E25|fc=1,f=2003-:PATROL_TP_FR
+  - 743.763.220E26|fc=1,f=2003-:PATROL_TP_FL
+  - 743.763.220E28|fc=1,f=2003-:PATROL_TP_RL

@@ -1,4 +1,8 @@
 { "commands": [
+{ "hdr": "743", "rax": "763", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 30,
+  "signals": [
+    {"id": "PATROL_ODO_METER", "path": "Trips", "fmt": {"bix": 56, "len": 24, "max": 16777215, "unit": "kilometers" }, "name": "Odometer, meter group 1", "suggestedMetric": "odometer"}
+  ]},
 { "hdr": "743", "rax": "763", "fcm1": true, "cmd": {"22": "0E01"}, "freq": 1, "filter": { "from": 2003 }, "dbgfilter": { "to": 2023, "from": 2025 },
   "signals": [
     {"id": "PATROL_ODO", "path": "Trips", "fmt": { "len": 24, "max": 16777215, "unit": "miles" }, "name": "Odometer", "suggestedMetric": "odometer"}
@@ -18,6 +22,21 @@
 { "hdr": "743", "rax": "763", "fcm1": true, "cmd": {"22": "0E28"}, "freq": 15, "filter": { "from": 2003 }, "dbgfilter": { "to": 2023, "from": 2025 },
   "signals": [
     {"id": "PATROL_TP_RL", "path": "Tires", "fmt": { "len": 8, "max": 439.5, "mul": 1.7236894, "nullmin": 0, "unit": "kilopascal" }, "name": "Rear left tire pressure", "suggestedMetric": "rearLeftTirePressure"}
+  ]},
+{ "hdr": "758", "rax": "778", "fcm1": true, "din": "C0", "dout": "81", "dbg": true, "cmd": {"21": "10"}, "freq": 15,
+  "signals": [
+    {"id": "PATROL_WHL_1_P", "path": "Tires", "fmt": {"bix": 16, "len": 8, "max": 63.75, "div": 4, "unit": "psi" }, "name": "Wheel 1 pressure"},
+    {"id": "PATROL_WHL_2_P", "path": "Tires", "fmt": {"bix": 24, "len": 8, "max": 63.75, "div": 4, "unit": "psi" }, "name": "Wheel 2 pressure"},
+    {"id": "PATROL_WHL_3_P", "path": "Tires", "fmt": {"bix": 32, "len": 8, "max": 63.75, "div": 4, "unit": "psi" }, "name": "Wheel 3 pressure"},
+    {"id": "PATROL_WHL_4_P", "path": "Tires", "fmt": {"bix": 40, "len": 8, "max": 63.75, "div": 4, "unit": "psi" }, "name": "Wheel 4 pressure"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"21": "01"}, "freq": 5,
+  "signals": [
+    {"id": "PATROL_OUTPUT_SPD",   "path": "Movement",     "fmt": {"bix": 40,  "len": 16, "max": 65535,                                             "unit": "rpm"        }, "name": "Output speed"},
+    {"id": "PATROL_TURBINE_SPD",  "path": "Movement",     "fmt": {"bix": 56,  "len": 16, "max": 65535,                                             "unit": "rpm"        }, "name": "Turbine speed"},
+    {"id": "PATROL_TQ_CONV_SLIP", "path": "Transmission", "fmt": {"bix": 120, "len": 16, "max": 65535,                                             "unit": "rpm"        }, "name": "Torque converter slip"},
+    {"id": "PATROL_ATF_T_VAR_1",  "path": "Transmission", "fmt": {"bix": 152, "len": 8,  "max": 392,   "min": -67, "mul": 9, "div": 5, "add": -67, "unit": "fahrenheit" }, "name": "Transmission fluid temperature, variant 1"},
+    {"id": "PATROL_ATF_T_VAR_2",  "path": "Transmission", "fmt": {"bix": 160, "len": 8,  "max": 392,   "min": -67, "mul": 9, "div": 5, "add": -67, "unit": "fahrenheit" }, "name": "Transmission fluid temperature, variant 2"}
   ]}
 ]
 }
