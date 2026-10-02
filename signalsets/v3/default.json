@@ -5,7 +5,7 @@
   ]},
 { "hdr": "743", "rax": "763", "fcm1": true, "cmd": {"22": "0E01"}, "freq": 1, "filter": { "from": 2003 }, "dbgfilter": { "to": 2023, "from": 2025 },
   "signals": [
-    {"id": "PATROL_ODO", "path": "Trips", "fmt": { "len": 24, "max": 16777215, "unit": "miles" }, "name": "Odometer", "suggestedMetric": "odometer"}
+    {"id": "PATROL_ODO", "path": "Trips", "fmt": { "len": 24, "max": 16777215, "unit": "kilometers" }, "name": "Odometer", "suggestedMetric": "odometer"}
   ]},
 { "hdr": "743", "rax": "763", "fcm1": true, "cmd": {"22": "0E25"}, "freq": 15, "filter": { "from": 2003 }, "dbgfilter": { "to": 2023, "from": 2025 },
   "signals": [
